@@ -309,7 +309,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers `relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'origami
@@ -344,10 +344,13 @@ values."
    ))
 
 (defun dotspacemacs/user-init ()
-  (setq configuration-layer--elpa-archives
+  (setq configuration-layer-elpa-archives
         '(("melpa-cn" . "https://elpa.emacs-china.org/melpa/")
           ("org-cn"   . "https://elpa.emacs-china.org/org/")
-          ("gnu-cn"   . "https://elpa.emacs-china.org/gnu/")))
+          ("gnu-cn"   . "https://elpa.emacs-china.org/gnu/")
+          ("marmalade-cn"   . "https://elpa.emacs-china.org/marmalade/")
+          ("sunrise-cn"   . "https://elpa.emacs-china.org/sunrise-commander/")
+          ("user-cn"   . "https://elpa.emacs-china.org/user42/")))
 
   ;; https://github.com/syl20bnr/spacemacs/issues/2705
   ;; (setq tramp-mode nil)
